@@ -34,4 +34,4 @@ $AAPT add bin/hello.unaligned.apk classes.dex
 
 echo "Aligning and signing APK..."
 $ZIPALIGN -f 4 bin/hello.unaligned.apk bin/hello.apk
-$APKSIGNER sign --ks keystore.jks bin/hello.apk
+$APKSIGNER sign --ks keystore.jks --ks-pass env:FOOBAR bin/hello.apk
