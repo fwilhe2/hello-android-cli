@@ -19,3 +19,8 @@ jobs:
         java-version: 1.8
     - name: Build
       run: bash make.sh
+    - name: Archive results
+      uses: actions/upload-artifact@v1
+      with:
+        name: build
+        path: .
